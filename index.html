@@ -3,11 +3,51 @@
 <html>
   <head>
     <title>CSK003a by PsklQc</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+      });
+    });
+    </script>
+  
+    <style>
+      h1,#myYear {
+        color: purple;
+        font-family: 'Fascinate', cursive;
+      }
+      #panel, #flip {
+        padding: 5px;
+        text-align: center;
+        color: white;
+        font-family: 'Fascinate', cursive;
+        background-color: #990044;
+        border: solid 3px #440099;
+      }
+
+      #panel {
+        padding: 50px;
+        display: none;
+      }
+      
+    </style>
+  
   </head>
   
   <body>
     <h1>Welcome to Cardano Starter Kit #003!</h1>
-    <p>Where we party like it's</p>
+    <p>Where we party like it's <span id="myYear"></span>!</p>
+    <div id="flip">If you didn't come to party...</div>
+    <div id="panel">Don't bother knocking on my door</div>
+    
+    <script>
+      var year = 1999;
+      document.getElementById("myYear").innerHTML = year;
+    </script>
   </body>
   
 </html>
